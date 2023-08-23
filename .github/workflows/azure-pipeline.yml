@@ -19,6 +19,7 @@ env:
 
 jobs:
   deploy:
+    if: ${{ github.event.client_payload.passed }}
     runs-on: ubuntu-latest
     steps:
       - name: Output Github context
