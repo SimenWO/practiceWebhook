@@ -23,7 +23,7 @@ jobs:
     steps:
       - name: Output Github context
         run: |
-        echo"${{ toJSON(github) }}
+          echo"${{ toJSON(github) }}
       - uses: actions/checkout@v3
       - uses: azure/login@v1
         name: Sign in to Azure
