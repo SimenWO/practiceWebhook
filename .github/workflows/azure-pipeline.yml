@@ -1,7 +1,7 @@
 name: CD - Azure Bicep
 
 on:
-  workflow_dispatch:
+  repository_dispatch:
     branches:
       - main
     paths:
