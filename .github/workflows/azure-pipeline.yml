@@ -40,4 +40,4 @@ jobs:
           region: ${{ env.LOCATION }}
           subscriptionId: ${{ env.ARM_SUBSCRIPTION_ID }}
           template: ./infrastructure/main.bicep
-          parameters: ./infrastructure/parameters.json
+          parameters: ./infrastructure/parameters.bicepparam
