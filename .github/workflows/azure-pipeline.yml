@@ -22,8 +22,7 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: Output Github context
-        run: |
-          echo"${{ toJSON(github) }}
+        run: echo "${{ toJSON(github) }}"
       - uses: actions/checkout@v3
       - uses: azure/login@v1
         name: Sign in to Azure
