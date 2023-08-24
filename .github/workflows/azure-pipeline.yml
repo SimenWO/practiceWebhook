@@ -15,7 +15,7 @@ env:
   ARM_TENANT_ID: ${{ secrets.ARM_TENANT_ID }}
   ARM_SUBSCRIPTION_ID: ${{ secrets.ARM_SUBSCRIPTION_ID }}
   ARM_CLIENT_ID: ${{ secrets.ARM_CLIENT_ID }}
-  LOCATION: ${{ secrets.PRIMARY_LOCATION }}
+  LOCATION: ${{ github.event.client_payload.r16c6e272ee4e470ca7ad9a648001b4a3 }}
 
 jobs:
   deploy:
@@ -23,6 +23,8 @@ jobs:
     steps:
       - name: Output Github context
         run: echo "${{ toJSON(github) }}"
+      - name: Testing output
+        run: echo "${{ env.LOCATION }}"
       - uses: actions/checkout@v3
       - uses: azure/login@v1
         name: Sign in to Azure
