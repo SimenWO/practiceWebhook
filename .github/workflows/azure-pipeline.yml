@@ -42,4 +42,4 @@ jobs:
           region: ${{ env.LOCATION }}
           subscriptionId: ${{ env.ARM_SUBSCRIPTION_ID }}
           template: ./infrastructure/main.bicep
-          parameters: ./infrastructure/parameters.bicepparam
+          parameters: ./infrastructure/parameters.json prefix=${{ github.event.client_payload.rb930cc7b56994f938bf4ee5e7cc27de7 }}
